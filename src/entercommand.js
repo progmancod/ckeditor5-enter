@@ -91,7 +91,7 @@ function splitBlock( writer, splitPos ) {
 
 function* getAllowedAttributes( schema, allAttributes ) {
 	for ( const attr of allAttributes ) {
-		if ( attr && schema.getAttributeProperties( attr[ 0 ] ).copyOnEnter ) {
+		if ( attr && schema.getAttributeProperties( attr[ 0 ] ) ) {
 			yield attr;
 		}
 	}
