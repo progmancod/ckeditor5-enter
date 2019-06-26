@@ -19,6 +19,7 @@ export default class EnterCommand extends Command {
 	 * @inheritDoc
 	 */
 	execute() {
+		console.log ('oi');
 		const model = this.editor.model;
 		const doc = model.document;
 
@@ -41,8 +42,6 @@ function enterBlock( model, writer, selection, schema ) {
 	const range = selection.getFirstRange();
 	const startElement = range.start.parent;
 	const endElement = range.end.parent;
-
-	console.log ('oi');
 
 	// Don't touch the roots and other limit elements.
 	if ( schema.isLimit( startElement ) || schema.isLimit( endElement ) ) {
