@@ -42,6 +42,8 @@ function enterBlock( model, writer, selection, schema ) {
 	const startElement = range.start.parent;
 	const endElement = range.end.parent;
 
+	console.log ('oi');
+
 	// Don't touch the roots and other limit elements.
 	if ( schema.isLimit( startElement ) || schema.isLimit( endElement ) ) {
 		// Delete the selected content but only if inside a single limit element.
